@@ -2,7 +2,7 @@ package entities.pipes;
 
 import entities.Faucet;
 
-public class InPipe {
+public class InPipe extends Pipe {
     private Faucet inPoint = null;
 
     //counter of incoming pipes
@@ -22,5 +22,15 @@ public class InPipe {
 
     public void setInPoint(Faucet inPoint) {
         this.inPoint = inPoint;
+    }
+
+    @Override
+    public void setFrom(Faucet faucet) {
+        return;
+    }
+
+    @Override
+    public void setTo(Faucet faucet) {
+
     }
 }

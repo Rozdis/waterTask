@@ -2,16 +2,16 @@ package entities.pipes;
 
 import entities.Faucet;
 
-public class OutPipe {
+public class OutPipe extends Pipe {
     private Faucet fromPoint = null;
     //counter of outgoing pipes
     private static int counterOfOutPipes = 0;
 
-    public OutPipe(){
+    public OutPipe() {
         counterOfOutPipes++;
     }
 
-    public int getCounterOfOutPipes(){
+    public int getCounterOfOutPipes() {
         return counterOfOutPipes;
     }
 
@@ -21,5 +21,15 @@ public class OutPipe {
 
     public void setFromPoint(Faucet fromPoint) {
         this.fromPoint = fromPoint;
+    }
+
+    @Override
+    public void setFrom(Faucet faucet) {
+
+    }
+
+    @Override
+    public void setTo(Faucet faucet) {
+        return;
     }
 }
